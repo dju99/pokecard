@@ -1,0 +1,92 @@
+.header {
+  position: relative;
+  width: 50%;
+  height: auto;
+  margin: 3rem auto;
+
+  &__container {
+    width: 100%;
+    margin: 3rem 0;
+  }
+}
+
+.sample {
+  width: 225px;
+  height: 309px;
+  position: relative;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: 50% 50%;
+  animation: CardMove 10s infinite;
+}
+
+.rainbow_sample:before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  right: 0;
+  bottom: 0;
+  top: 9px;
+  width: 207.75px;
+  height: 293.25px;
+  background-image: repeating-linear-gradient(
+      rgb(255, 118, 118) 6%,
+      rgb(255, 239, 118) 12%,
+      rgb(157, 255, 118) 18%,
+      rgb(118, 255, 241) 24%,
+      rgb(118, 156, 255) 32%,
+      rgb(202, 118, 255) 38%,
+      rgb(255, 118, 118) 42%
+    ),
+    repeating-linear-gradient(133deg, #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%);
+  background-size: 400% 400%, 400% 400%;
+  background-blend-mode: overlay;
+  mix-blend-mode: color-dodge;
+  opacity: 0.8;
+  filter: saturate(2) brightness(0.5);
+  animation: EffectMove 10s infinite;
+}
+
+@keyframes CardMove {
+  0%,
+  100% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+  }
+  5%,
+  8% {
+    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+  }
+  13%,
+  16% {
+    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+  }
+  35%,
+  38% {
+    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+  }
+  55% {
+    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+  }
+}
+
+@keyframes EffectMove {
+  0%,
+  100% {
+    background-position: 50% 50%, 50% 50%;
+  }
+  5%,
+  8% {
+    background-position: 45% 55%, 55% 45%;
+  }
+  13%,
+  16% {
+    background-position: 40% 60%, 60% 40%;
+  }
+  35%,
+  38% {
+    background-position: 55% 45%, 45% 55%;
+  }
+  55% {
+    background-position: 60% 40%, 40% 60%;
+  }
+}

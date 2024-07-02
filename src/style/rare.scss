@@ -1,0 +1,18 @@
+.rare:before {
+  content: "";
+  position: absolute;
+  width: 252px;
+  height: 156px;
+  left: 23px;
+  right: 0;
+  bottom: 0;
+  top: 40px;
+  mix-blend-mode: color-dodge;
+}
+
+.rare:hover::before {
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+  background-position: 50% 50%;
+  background-size: 100%;
+  filter: brightness(2) contrast(1);
+}

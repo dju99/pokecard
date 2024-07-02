@@ -1,0 +1,36 @@
+.ex:hover {
+  box-shadow: -20px -20px 30px -25px #fac, 20px 20px 30px -25px #ddccaa, -7px -7px 10px -5px #fac, 7px 7px 10px -5px #ddccaa,
+    0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+
+.ex:after,
+.ex:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  filter: brightness(0.5);
+}
+
+.ex:hover::after {
+  background-image: url("https://poke-holo.simey.me/img/glitter.png");
+  background-size: 300%;
+}
+.ex:hover::before {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgb(255, 120, 120) 0%,
+    rgb(255, 240, 121) 10%,
+    rgb(208, 255, 122) 20%,
+    rgb(122, 255, 248) 30%,
+    rgb(121, 163, 255) 40%,
+    rgb(202, 121, 255) 50%,
+    rgb(255, 120, 120) 60%
+  );
+  background-position: var(--bg-position);
+  background-size: 250% 250%;
+}
