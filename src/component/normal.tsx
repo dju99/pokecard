@@ -66,7 +66,7 @@ function Normal() {
             className="card light"
             style={{ backgroundImage: `url(${data.url})` }}
           />
-        ))}card ex
+        ))}
       </div>
     </div>
   );
